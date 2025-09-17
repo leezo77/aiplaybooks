@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk Methodology - Complete Guide</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #10b981;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header .subtitle {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .phase {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        .phase h2 {
+            color: #10b981;
+            border-bottom: 2px solid #10b981;
+            padding-bottom: 10px;
+            font-size: 1.8em;
+        }
+        .method {
+            background: #f8f9fa;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        .method h3 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        .method-section {
+            margin: 15px 0;
+        }
+        .method-section h4 {
+            color: #10b981;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .use-case {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        .use-case h3 {
+            color: #10b981;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .callout {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .callout h4 {
+            color: #065f46;
+            margin-top: 0;
+        }
+        .callout p {
+            color: #047857;
+        }
+        .toc {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .toc h2 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 10px;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        @media print {
+            .page-break {
+                page-break-before: always;
+            }
+            body {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Walk Methodology</h1>
+        <p class="subtitle">Your Complete Guide to Building MVP AI Agents</p>
+        <div style="margin-top: 20px;">
+            <span class="badge">MVP Focus</span>
+        </div>
+        <p style="margin-top: 20px; color: #666; font-style: italic;">
+            Start small, prove value, build reliable AI agents that deliver immediate ROI
+        </p>
+    </div>
+
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><strong>Part 1: Walk Playbook</strong></li>
+            <li style="margin-left: 20px;"><a href="#discover">1. Discover - Problem Framing & Risk Assessment</a></li>
+            <li style="margin-left: 20px;"><a href="#decide">2. Decide - Architecture & Data Strategy</a></li>
+            <li style="margin-left: 20px;"><a href="#make">3. Make - Production-Ready Implementation</a></li>
+            <li style="margin-left: 20px;"><a href="#validate">4. Validate - Testing & Safety Checks</a></li>
+            <li><strong>Part 2: Walk Use Cases</strong></li>
+            <li style="margin-left: 20px;"><a href="#customer-support">5. Customer Support & Service</a></li>
+            <li style="margin-left: 20px;"><a href="#document-processing">6. Document & Data Processing</a></li>
+            <li style="margin-left: 20px;"><a href="#internal-operations">7. Internal Operations</a></li>
+            <li style="margin-left: 20px;"><a href="#sales-marketing">8. Sales & Marketing</a></li>
+        </ul>
+    </div>
+
+    <div class="callout">
+        <h4>The "Walk Before You Run" Philosophy</h4>
+        <p>The goal of this methodology is to get a valuable, safe, and measurable agent into a controlled production environment. We focus on four core phases: <strong>Discover</strong>, <strong>Decide</strong>, <strong>Make</strong>, and <strong>Validate</strong>. Perfect for first-time builders, 2-4 week delivery cycles, and immediate ROI.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 1: WALK PLAYBOOK -->
+    <h1 style="color: #10b981; text-align: center; margin: 40px 0;">PART 1: WALK PLAYBOOK</h1>
+
+    <div class="phase" id="discover">
+        <h2>1. Discover</h2>
+        <p><strong>Goal:</strong> Start here to clarify goals, identify risks, and ensure your agent is solving a real, measurable problem. A strong foundation prevents wasted effort later.</p>
+
+        <div class="method">
+            <h3>Problem Framing & Success Criteria</h3>
+            <p>A structured canvas to ensure your agent solves a concrete, high-value problem with measurable success.</p>
+            
+            <div class="method-section">
+                <h4>What it is</h4>
+                <p>A simple, one-page canvas to define a concrete problem and how to measure success. This is the most critical step.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>At the very beginning of the project, before any technical decisions are made.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <ol>
+                    <li><strong>Start Small, Scale Later:</strong> Scope creep is the enemy of effective AI. Define the smallest possible task the agent can perform to demonstrate value.</li>
+                    <li><strong>Define the User and Outcome:</strong> State the primary user and the desired outcome in a simple format: verb + object + constraint (e.g., "Categorize product SKUs from an email order").</li>
+                    <li><strong>Define Inputs and Allowed Actions:</strong> List what the agent receives (e.g., email text) and what it is allowed to do (e.g., call the product database API).</li>
+                    <li><strong>Draft Success Metrics:</strong> Define clear, measurable goals. Focus on Action Completion (AC) and Tool Selection Quality (TSQ). Set targets for latency and cost per action.</li>
+                </ol>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A simple 1-page document with a clear goal statement, defined inputs/actions, and success metrics.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Starting by picking a cool AI model instead of defining the problem</li>
+                    <li>Having vague success criteria like "improve efficiency"</li>
+                    <li>Giving the agent unlimited powers or tool access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="method">
+            <h3>Risk & Harm Mapping</h3>
+            <p>A quick exercise to identify the most obvious potential harms and plan basic mitigations.</p>
+            
+            <div class="method-section">
+                <h4>What it is</h4>
+                <p>A quick exercise to identify the most obvious potential harms (e.g., privacy leaks, incorrect actions) and plan basic mitigations.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>Immediately after problem framing.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <ol>
+                    <li><strong>Map Data Sensitivity:</strong> Identify if the agent will handle sensitive data (PII, PHI).</li>
+                    <li><strong>List Attack Surfaces:</strong> Note the primary ways the agent could be misused (malicious user inputs, insecure tool endpoints).</li>
+                    <li><strong>Define Basic Mitigations:</strong> For each major risk, define a simple mitigation strategy (e.g., "add an input validation step," "require human approval for actions that delete data").</li>
+                </ol>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A simple risk register listing the top 3-5 risks and their planned mitigations.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Treating safety as something to add later</li>
+                    <li>Not considering the security of the tools the agent uses</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="phase" id="decide">
+        <h2>2. Decide</h2>
+        <p><strong>Goal:</strong> Choose the right technical path. This phase is about selecting the simplest architecture and data strategy that meets the goals you defined in the Discover phase.</p>
+
+        <div class="method">
+            <h3>Pattern Selection (Simplified)</h3>
+            <p>A decision tree to choose the simplest agent architecture that will solve your defined problem.</p>
+            
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>After problem framing and risk mapping.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <div style="margin: 15px 0;">
+                    <h5 style="color: #333; margin-bottom: 10px;">Workflow-Embedded Agent</h5>
+                    <p>Use this if the task is one step in an existing process, needs a fast response, and uses 1-2 tools. This is the simplest pattern, ideal for low-latency tasks.</p>
+                    
+                    <h5 style="color: #333; margin: 15px 0 10px 0;">Independent Agent Service</h5>
+                    <p>Choose this if multiple applications need to call the agent. This provides a reusable API for your agent but is more complex.</p>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <div style="background: #eff6ff; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <h5 style="color: #1e40af; margin-top: 0;">AI Agent Builder vs. Agent Workbench</h5>
+                    <p style="margin-bottom: 10px;"><strong>Use AI Agent Builder if:</strong> The agent's primary function is information retrieval (RAG), document classification, data extraction, or simple Q&A. This is a no-code solution ideal for low-to-medium complexity use cases.</p>
+                    <p><strong>Use Agent Workbench if:</strong> The agent's core function involves more complex reasoning, multi-step processes, or performing actions via tool integration. This is a low-code environment for building sophisticated, enterprise-grade agents.</p>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A clear decision on the architectural pattern with a brief rationale.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <p>Over-engineering with a multi-agent system when a single agent will do; tightly coupling the agent to a single application if it needs to be reused.</p>
+            </div>
+        </div>
+
+        <div class="method">
+            <h3>Grounding Data Strategy (RAG Basics)</h3>
+            <p>A basic plan for how your agent will use internal knowledge reliably using Retrieval-Augmented Generation.</p>
+            
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>If your agent's answers or actions must be based on your company's internal or up-to-date data.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <ol>
+                    <li><strong>Inventory Data Sources:</strong> List the 1-3 most critical data sources the agent needs.</li>
+                    <li><strong>Choose a Chunking Strategy:</strong> Start with a simple fixed-size chunking method. Semantic chunking is better but adds complexity for an MVP.</li>
+                    <li><strong>Select a Vector Store:</strong> For an MVP, a simple in-memory store like Chroma or a managed service like Pinecone can get you started quickly with minimal operational overhead.</li>
+                    <li><strong>Plan a Basic Data Pipeline:</strong> Outline the simple flow: clean source data → embed → index in vector store.</li>
+                </ol>
+            </div>
+
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <div style="background: #eff6ff; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <h5 style="color: #1e40af; margin-top: 0;">Data Fabric</h5>
+                    <p>The OutSystems Developer Cloud (ODC) provides Data Fabric, a unified, low-code layer for accessing different enterprise data sources like databases and APIs. For RAG agents, Data Fabric can provide a secure and centralized connection point for the agent's data retrieval step, simplifying integration and enforcing data governance.</p>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A basic RAG architecture diagram and choice of vector store.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Trying to connect all company data at once</li>
+                    <li>Using fixed-size chunks for documents where context is easily lost</li>
+                    <li>Not having a plan to keep the indexed data fresh</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="phase" id="make">
+        <h2>3. Make</h2>
+        <p><strong>Goal:</strong> Implement the agent using production-ready practices. This is where you leverage OutSystems' capabilities to build a robust and governable agent, not just a demo.</p>
+
+        <div class="method">
+            <h3>Agent Skeleton (MVP Checklist)</h3>
+            <p>A production-ready starting point that includes essential guardrails and observability from day one to avoid building fragile "demo-ware".</p>
+            
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>At the start of implementation.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>The MVP Checklist</h4>
+                <ul>
+                    <li><strong>Typed Schemas:</strong> Use a tool like JSON Schema to define structured inputs and outputs. This is the foundation of a reliable agent.</li>
+                    <li><strong>Tool Adapters with Error Handling:</strong> Create clear interfaces for any tools the agent uses. Ensure they handle errors gracefully and can retry if necessary.</li>
+                    <li><strong>Basic Guardrails:</strong> Implement input sanitation to block malicious prompts and output validators to ensure the agent's response is in the correct format.</li>
+                    <li><strong>Simple Memory:</strong> For conversational agents, implement a basic short-term memory that stores the last few turns of the conversation. Long-term memory can be added later.</li>
+                    <li><strong>Observability Hooks:</strong> Integrate basic logging and tracing from day one. Use a standard like OpenTelemetry to log key events: agent start/end, tool calls, and final output.</li>
+                    <li><strong>Human-in-the-Loop (for risky actions):</strong> If the agent can perform irreversible actions, build a mandatory "escape hatch" where it must pause and get human approval before proceeding.</li>
+                    <li><strong>A Kill Switch:</strong> Implement a simple mechanism, like a feature flag, to quickly and completely disable the agent's automated actions in production if something goes wrong.</li>
+                </ul>
+            </div>
+
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <div style="background: #eff6ff; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <h5 style="color: #1e40af; margin-top: 0;">Agent Workbench AgentTask</h5>
+                    <p>An agent built with the OutSystems Agent Workbench is implemented as a visual Server Action called an AgentTask. This action orchestrates the agent's reasoning loop through a sequence of granular steps, making the logic transparent and maintainable. A typical MVP sequence includes:</p>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>GetGroundingData:</strong> Fetches contextual information from data sources, often via Data Fabric.</li>
+                        <li><strong>BuildMessages:</strong> Constructs the final prompt for the LLM by combining the user query, retrieved data, and conversation history.</li>
+                        <li><strong>CallLLM:</strong> Sends the prompt to the selected AI model (e.g., Azure OpenAI).</li>
+                        <li><strong>StoreMemory:</strong> Persists the conversation turn to the OutSystems database to enable memory.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A scaffolded agent in your OutSystems app, ready for logic implementation that includes all the checklist items.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Hard-coding prompts in the logic; no error handling; missing a kill switch</li>
+                    <li>Mixing business logic into prompts</li>
+                    <li>Not having typed inputs/outputs</li>
+                    <li>Having no way to debug what the agent did</li>
+                </ul>
+            </div>
+
+            <div class="method-section">
+                <h4>Tools</h4>
+                <p><strong>OutSystems Agent Builder</strong>, <strong>Agent Workbench</strong> for testing and iteration, OutSystems Service Studio, and the <strong>Feature Flags Forge component</strong> for the kill switch.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="phase" id="validate">
+        <h2>4. Validate</h2>
+        <p><strong>Goal:</strong> Evaluate the agent's reliability and safety. Before going live, you must have a repeatable way to prove the agent does what it's supposed to do—and doesn't do what it shouldn't.</p>
+
+        <div class="method">
+            <h3>Agent Evaluation (Core Metrics)</h3>
+            <p>A repeatable process to measure if your agent is successfully achieving its goal.</p>
+            
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>Before launch and every time you change the prompt or model.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <ol>
+                    <li><strong>Author 10-20 Key Scenarios:</strong> Write a set of test cases that represent the agent's most common and important tasks.</li>
+                    <li><strong>Measure Action Completion (AC):</strong> This is your primary success metric. It's a simple question: did the agent successfully achieve the user's end-to-end goal in the scenario?</li>
+                    <li><strong>Measure Tool Selection Quality (TSQ):</strong> This is your primary efficiency metric. Did the agent use the correct tools with the correct parameters, and did it avoid unnecessary calls?</li>
+                    <li><strong>Track Latency and Cost:</strong> For each scenario, record how long the agent took and how much it cost (e.g., token usage).</li>
+                    <li><strong>Gate your deployment pipeline:</strong> Don't deploy if success metrics drop.</li>
+                </ol>
+
+                <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 15px; margin: 15px 0;">
+                    <h5 style="color: #065f46; margin-top: 0;">Acceptance Criteria Example</h5>
+                    <ul style="color: #047857;">
+                        <li>AC ≥ 85% on key scenarios</li>
+                        <li>TSQ ≥ 90%</li>
+                        <li>p95 latency ≤ 5 seconds</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <div style="background: #eff6ff; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                    <h5 style="color: #1e40af; margin-top: 0;">ODC Monitoring</h5>
+                    <p>You can use the built-in observability tools in the OutSystems Developer Cloud (ODC) to track your MVP's performance against your defined metrics.</p>
+                    <ul style="margin-top: 10px;">
+                        <li><strong>App Analytics Dashboard:</strong> The native dashboard in the ODC Portal monitors key metrics for AI agents, including total requests, response time (latency), and errors.</li>
+                        <li><strong>Traces and Logs:</strong> For failed scenarios, you can use the ODC Portal to examine distributed traces and logs. Traces capture the sequence of events in an agent's execution, helping you pinpoint the exact step where an issue occurred.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A simple test results dashboard; pass/fail criteria for deployments.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Only checking if the text output "looks good"; not measuring end-to-end success</li>
+                    <li>Not measuring end-to-end success</li>
+                </ul>
+            </div>
+
+            <div class="method-section">
+                <h4>Tools</h4>
+                <p><strong>OutSystems AI Agent Inspector</strong> for debugging; a simple OutSystems app to run scenarios and log results.</p>
+            </div>
+        </div>
+
+        <div class="method">
+            <h3>Basic Safety Testing</h3>
+            <p>A focused set of tests for the most likely security and safety risks identified during the Discover phase.</p>
+            
+            <div class="method-section">
+                <h4>When to use</h4>
+                <p>Before the first production deployment.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>MVP Steps</h4>
+                <ol>
+                    <li><strong>Prompt Injection Tests:</strong> Use a library of known prompt injection attacks to test if the agent can be forced to ignore its instructions.</li>
+                    <li><strong>Data Leakage Tests:</strong> If the agent handles sensitive data, create tests to see if you can trick it into revealing that data.</li>
+                    <li><strong>Validate Guardrails:</strong> Test the input and output validators you built in the "Make" phase to ensure they work as expected.</li>
+                </ol>
+            </div>
+
+            <div class="method-section">
+                <h4>Outputs</h4>
+                <p>A safety scorecard showing pass/fail for the essential safety checks.</p>
+            </div>
+
+            <div class="method-section">
+                <h4>Pitfalls to Avoid</h4>
+                <ul>
+                    <li>Treating safety as an advisory check</li>
+                    <li>Not having automated safety tests that can be run regularly</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PART 2: WALK USE CASES -->
+    <h1 style="color: #10b981; text-align: center; margin: 40px 0;">PART 2: WALK USE CASES</h1>
+
+    <div class="callout">
+        <h4>Start Small, Prove Value</h4>
+        <p>These "Walk" use cases are perfect for your first AI agent implementations. Each scenario is designed to be built quickly, demonstrate clear value, and establish a foundation for more complex agents later. Focus on single-purpose agents that solve specific problems with measurable outcomes. These use cases typically require 2-4 weeks to implement and can show immediate ROI.</p>
+    </div>
+
+    <div class="phase" id="customer-support">
+        <h2>5. Customer Support & Service</h2>
+
+        <div class="use-case">
+            <h3>FAQ Response Agent</h3>
+            <span class="badge">Beginner</span>
+            <p>Automatically answer common customer questions using your existing FAQ database and knowledge base.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Receives customer questions via chat, email, or form</li>
+                        <li>Searches internal FAQ and knowledge base</li>
+                        <li>Provides accurate, branded responses</li>
+                        <li>Escalates complex queries to humans</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Reduces support team workload by 40-60%</li>
+                        <li>Provides 24/7 instant responses</li>
+                        <li>Improves customer satisfaction scores</li>
+                        <li>Frees agents for complex issues</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use AI Agent Builder with RAG for FAQ search, integrate with your existing customer portal or chat widget.</p>
+            </div>
+        </div>
+
+        <div class="use-case">
+            <h3>Ticket Classification Agent</h3>
+            <span class="badge">Beginner</span>
+            <p>Automatically categorize and route incoming support tickets to the right teams based on content analysis.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Analyzes ticket content and attachments</li>
+                        <li>Assigns priority levels (Low, Medium, High, Critical)</li>
+                        <li>Routes to appropriate team/department</li>
+                        <li>Adds relevant tags and metadata</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Reduces manual triage time by 80%</li>
+                        <li>Improves first-contact resolution</li>
+                        <li>Ensures urgent issues get priority</li>
+                        <li>Provides consistent categorization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use Agent Workbench to integrate with your ticketing system (ServiceNow, Zendesk, etc.) and implement classification logic.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="phase" id="document-processing">
+        <h2>6. Document & Data Processing</h2>
+
+        <div class="use-case">
+            <h3>Invoice Data Extraction Agent</h3>
+            <span class="badge">Intermediate</span>
+            <p>Extract key information from invoices, receipts, and financial documents for automatic data entry.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Processes PDF, image, and scanned documents</li>
+                        <li>Extracts vendor details, amounts, dates, line items</li>
+                        <li>Validates against business rules</li>
+                        <li>Creates entries in accounting system</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Reduces data entry time by 90%</li>
+                        <li>Eliminates manual transcription errors</li>
+                        <li>Speeds up invoice processing</li>
+                        <li>Improves audit trail accuracy</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use Agent Workbench with OCR capabilities and Data Fabric to connect to your ERP/accounting systems.</p>
+            </div>
+        </div>
+
+        <div class="use-case">
+            <h3>Contract Review Assistant</h3>
+            <span class="badge">Intermediate</span>
+            <p>Review contracts and legal documents to identify key terms, risks, and compliance requirements.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Scans contracts for standard clauses</li>
+                        <li>Identifies unusual terms and potential risks</li>
+                        <li>Extracts key dates, amounts, and obligations</li>
+                        <li>Flags items requiring legal review</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Accelerates contract review process</li>
+                        <li>Reduces legal costs for routine contracts</li>
+                        <li>Ensures consistent risk assessment</li>
+                        <li>Improves contract compliance tracking</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use AI Agent Builder with legal templates and clause databases. Integrate with document management systems.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="phase" id="internal-operations">
+        <h2>7. Internal Operations</h2>
+
+        <div class="use-case">
+            <h3>Meeting Summary Agent</h3>
+            <span class="badge">Beginner</span>
+            <p>Generate structured summaries and action items from meeting transcripts and recordings.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Processes meeting transcripts or audio files</li>
+                        <li>Identifies key decisions and action items</li>
+                        <li>Extracts participant contributions</li>
+                        <li>Creates formatted meeting notes</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Saves 30-45 minutes per meeting</li>
+                        <li>Ensures no action items are missed</li>
+                        <li>Provides consistent meeting documentation</li>
+                        <li>Improves follow-up and accountability</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use AI Agent Builder to process transcripts from Zoom, Teams, or other meeting platforms. Store summaries in SharePoint or internal portals.</p>
+            </div>
+        </div>
+
+        <div class="use-case">
+            <h3>Employee Onboarding Assistant</h3>
+            <span class="badge">Beginner</span>
+            <p>Guide new employees through onboarding tasks, answer HR questions, and track completion progress.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Provides step-by-step onboarding guidance</li>
+                        <li>Answers common HR policy questions</li>
+                        <li>Tracks task completion and deadlines</li>
+                        <li>Sends reminders for pending items</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Reduces HR workload for routine queries</li>
+                        <li>Improves new hire experience</li>
+                        <li>Ensures consistent onboarding process</li>
+                        <li>Accelerates time-to-productivity</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use AI Agent Builder with HR knowledge base and integrate with HRIS systems for task tracking and notifications.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="phase" id="sales-marketing">
+        <h2>8. Sales & Marketing</h2>
+
+        <div class="use-case">
+            <h3>Lead Qualification Agent</h3>
+            <span class="badge">Intermediate</span>
+            <p>Score and qualify incoming leads based on predefined criteria and company data.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Analyzes lead form submissions and interactions</li>
+                        <li>Assigns lead scores based on qualification criteria</li>
+                        <li>Routes qualified leads to sales teams</li>
+                        <li>Triggers nurturing campaigns for lower scores</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Improves sales team efficiency</li>
+                        <li>Increases conversion rates</li>
+                        <li>Reduces time spent on poor leads</li>
+                        <li>Enables faster response times</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use Agent Workbench to integrate with CRM systems (Salesforce, HubSpot) and implement scoring algorithms.</p>
+            </div>
+        </div>
+
+        <div class="use-case">
+            <h3>Product Recommendation Agent</h3>
+            <span class="badge">Intermediate</span>
+            <p>Suggest relevant products to customers based on their preferences, history, and behavior.</p>
+            
+            <div class="use-case-grid">
+                <div>
+                    <h4>What it does:</h4>
+                    <ul>
+                        <li>Analyzes customer profile and purchase history</li>
+                        <li>Suggests complementary or upgrade products</li>
+                        <li>Provides personalized explanations</li>
+                        <li>Tracks recommendation performance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Business impact:</h4>
+                    <ul>
+                        <li>Increases average order value</li>
+                        <li>Improves customer satisfaction</li>
+                        <li>Reduces product discovery time</li>
+                        <li>Enables personalized experiences</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="method-section">
+                <h4>OutSystems Implementation</h4>
+                <p>Use Agent Workbench with customer data from e-commerce platforms and integrate with product catalogs.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="callout">
+        <h4>Getting Started with Walk Use Cases</h4>
+        <p><strong>Choose Your First Agent:</strong></p>
+        <ul>
+            <li>Start with a high-volume, repetitive task</li>
+            <li>Pick something with clear success criteria</li>
+            <li>Focus on single-domain problems</li>
+        </ul>
+        
+        <p><strong>Implementation Timeline:</strong></p>
+        <ul>
+            <li><strong>Week 1-2:</strong> Problem framing and data preparation</li>
+            <li><strong>Week 2-3:</strong> Agent development and testing</li>
+            <li><strong>Week 3-4:</strong> Integration and deployment</li>
+            <li><strong>Week 4+:</strong> Monitor, measure, and iterate</li>
+        </ul>
+    </div>
+
+    <div class="callout">
+        <h4>Quick Reference: The MVP Mindset</h4>
+        <div class="use-case-grid">
+            <div>
+                <ul>
+                    <li>Start with the smallest, most specific problem</li>
+                    <li>Choose the simplest architecture that works</li>
+                    <li>If the agent needs knowledge, use basic RAG</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Build a stable skeleton with logging and kill switch</li>
+                    <li>Prove its value with Action Completion (AC) and Tool Selection Quality (TSQ)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px; padding-top: 40px; border-top: 2px solid #10b981;">
+        <h3 style="color: #10b981;">Ready to Scale?</h3>
+        <p style="color: #666; font-size: 1.1em;">Once you've successfully implemented Walk agents, explore the <strong>Run Methodology</strong> for enterprise-scale, multi-agent systems.</p>
+        <p style="margin-top: 30px; font-style: italic; color: #666;">© 2025 Walk Methodology - Your Complete Guide to Building MVP AI Agents</p>
+    </div>
+
+</body>
+</html>

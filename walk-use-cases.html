@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walk AI Agent Use Cases | MVP Examples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .use-case-card {
+            background: #fff;
+            border: 1px solid #d6d7d9;
+            border-radius: 8px;
+            transition: all 0.15s ease-in-out;
+        }
+        .use-case-card:hover {
+            border-color: #0071bc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 113, 188, 0.15);
+        }
+        .difficulty-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .category-header {
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gray-800 text-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <div>
+                    <h1 class="text-2xl font-bold">Walk AI Agent Use Cases</h1>
+                    <p class="text-sm text-gray-300">MVP-ready scenarios for your first AI agents</p>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">← Home</a>
+                    <a href="walk-playbook.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Walk Playbook</a>
+                    <a href="run-use-cases.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Run Use Cases</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Start Small, Prove Value</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 mb-6">
+                    These "Walk" use cases are perfect for your first AI agent implementations. Each scenario is designed to be built quickly, demonstrate clear value, and establish a foundation for more complex agents later.
+                </p>
+                <div class="bg-green-50 border-l-4 border-green-400 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-green-900 mb-2">Perfect for MVP Development</h3>
+                    <p class="text-green-800">
+                        Focus on single-purpose agents that solve specific problems with <strong>measurable outcomes</strong>. These use cases typically require 2-4 weeks to implement and can show immediate ROI.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Customer Support & Service</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-blue-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">FAQ Response Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Automatically answer common customer questions using your existing FAQ database and knowledge base.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Receives customer questions via chat, email, or form</li>
+                                <li>• Searches internal FAQ and knowledge base</li>
+                                <li>• Provides accurate, branded responses</li>
+                                <li>• Escalates complex queries to humans</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces support team workload by 40-60%</li>
+                                <li>• Provides 24/7 instant responses</li>
+                                <li>• Improves customer satisfaction scores</li>
+                                <li>• Frees agents for complex issues</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use AI Agent Builder with RAG for FAQ search, integrate with your existing customer portal or chat widget.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-yellow-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Ticket Classification Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Automatically categorize and route incoming support tickets to the right teams based on content analysis.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Analyzes ticket content and attachments</li>
+                                <li>• Assigns priority levels (Low, Medium, High, Critical)</li>
+                                <li>• Routes to appropriate team/department</li>
+                                <li>• Adds relevant tags and metadata</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces manual triage time by 80%</li>
+                                <li>• Improves first-contact resolution</li>
+                                <li>• Ensures urgent issues get priority</li>
+                                <li>• Provides consistent categorization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use Agent Workbench to integrate with your ticketing system (ServiceNow, Zendesk, etc.) and implement classification logic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Document & Data Processing</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-purple-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Invoice Data Extraction Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Intermediate</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Extract key information from invoices, receipts, and financial documents for automatic data entry.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Processes PDF, image, and scanned documents</li>
+                                <li>• Extracts vendor details, amounts, dates, line items</li>
+                                <li>• Validates against business rules</li>
+                                <li>• Creates entries in accounting system</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces data entry time by 90%</li>
+                                <li>• Eliminates manual transcription errors</li>
+                                <li>• Speeds up invoice processing</li>
+                                <li>• Improves audit trail accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use Agent Workbench with OCR capabilities and Data Fabric to connect to your ERP/accounting systems.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-green-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Contract Review Assistant</h4>
+                        </div>
+                        <span class="difficulty-badge">Intermediate</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Review contracts and legal documents to identify key terms, risks, and compliance requirements.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Scans contracts for standard clauses</li>
+                                <li>• Identifies unusual terms and potential risks</li>
+                                <li>• Extracts key dates, amounts, and obligations</li>
+                                <li>• Flags items requiring legal review</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Accelerates contract review process</li>
+                                <li>• Reduces legal costs for routine contracts</li>
+                                <li>• Ensures consistent risk assessment</li>
+                                <li>• Improves contract compliance tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use AI Agent Builder with legal templates and clause databases. Integrate with document management systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Internal Operations</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-red-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Meeting Summary Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Generate structured summaries and action items from meeting transcripts and recordings.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Processes meeting transcripts or audio files</li>
+                                <li>• Identifies key decisions and action items</li>
+                                <li>• Extracts participant contributions</li>
+                                <li>• Creates formatted meeting notes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Saves 30-45 minutes per meeting</li>
+                                <li>• Ensures no action items are missed</li>
+                                <li>• Provides consistent meeting documentation</li>
+                                <li>• Improves follow-up and accountability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use AI Agent Builder to process transcripts from Zoom, Teams, or other meeting platforms. Store summaries in SharePoint or internal portals.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-indigo-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Employee Onboarding Assistant</h4>
+                        </div>
+                        <span class="difficulty-badge">Beginner</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Guide new employees through onboarding tasks, answer HR questions, and track completion progress.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Provides step-by-step onboarding guidance</li>
+                                <li>• Answers common HR policy questions</li>
+                                <li>• Tracks task completion and deadlines</li>
+                                <li>• Sends reminders for pending items</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces HR workload for routine queries</li>
+                                <li>• Improves new hire experience</li>
+                                <li>• Ensures consistent onboarding process</li>
+                                <li>• Accelerates time-to-productivity</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use AI Agent Builder with HR knowledge base and integrate with HRIS systems for task tracking and notifications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Sales & Marketing</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-teal-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Lead Qualification Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Intermediate</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Score and qualify incoming leads based on predefined criteria and company data.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Analyzes lead form submissions and interactions</li>
+                                <li>• Assigns lead scores based on qualification criteria</li>
+                                <li>• Routes qualified leads to sales teams</li>
+                                <li>• Triggers nurturing campaigns for lower scores</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Improves sales team efficiency</li>
+                                <li>• Increases conversion rates</li>
+                                <li>• Reduces time spent on poor leads</li>
+                                <li>• Enables faster response times</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use Agent Workbench to integrate with CRM systems (Salesforce, HubSpot) and implement scoring algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-orange-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Product Recommendation Agent</h4>
+                        </div>
+                        <span class="difficulty-badge">Intermediate</span>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Suggest relevant products to customers based on their preferences, history, and behavior.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">What it does:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Analyzes customer profile and purchase history</li>
+                                <li>• Suggests complementary or upgrade products</li>
+                                <li>• Provides personalized explanations</li>
+                                <li>• Tracks recommendation performance</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Increases average order value</li>
+                                <li>• Improves customer satisfaction</li>
+                                <li>• Reduces product discovery time</li>
+                                <li>• Enables personalized experiences</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use Agent Workbench with customer data from e-commerce platforms and integrate with product catalogs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-green-50 border-l-4 border-green-500 p-8 mb-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Getting Started with Walk Use Cases</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Choose Your First Agent:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Start with a high-volume, repetitive task</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Pick something with clear success criteria</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Focus on single-domain problems</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Implementation Timeline:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Week 1-2:</strong> Problem framing and data preparation</li>
+                        <li><strong>Week 2-3:</strong> Agent development and testing</li>
+                        <li><strong>Week 3-4:</strong> Integration and deployment</li>
+                        <li><strong>Week 4+:</strong> Monitor, measure, and iterate</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <a href="walk-playbook.html" class="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors">
+                    Start Building with the Walk Playbook →
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Walk AI Agent Use Cases. Start small, prove value, scale smart.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

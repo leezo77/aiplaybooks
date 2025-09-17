@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run AI Agent Use Cases | Enterprise-Scale Examples</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .use-case-card {
+            background: #fff;
+            border: 1px solid #d6d7d9;
+            border-radius: 8px;
+            transition: all 0.15s ease-in-out;
+        }
+        .use-case-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        .difficulty-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .category-header {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .complexity-indicator {
+            background: linear-gradient(135deg, #ff7b7b 0%, #d63384 100%);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.75rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gray-800 text-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-4">
+                <div>
+                    <h1 class="text-2xl font-bold">Run AI Agent Use Cases</h1>
+                    <p class="text-sm text-gray-300">Enterprise-scale scenarios for complex AI systems</p>
+                </div>
+                <nav class="flex space-x-4">
+                    <a href="index.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">← Home</a>
+                    <a href="walk-use-cases.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Walk Use Cases</a>
+                    <a href="AI_Agent_Run_Playbook.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Run Playbook</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Scale to Enterprise Impact</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 mb-6">
+                    These "Run" use cases represent sophisticated, multi-agent systems designed for enterprise-scale operations. Build these after you've mastered the fundamentals with Walk use cases.
+                </p>
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-2">Complex Systems for Maximum Impact</h3>
+                    <p class="text-purple-800">
+                        These scenarios involve <strong>multi-agent orchestration</strong>, complex workflows, and enterprise integrations. Typical implementation time: 3-6 months with dedicated teams.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Intelligent Business Process Automation</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-blue-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">End-to-End Order Processing Orchestrator</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Advanced</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Fully automated order processing system that coordinates inventory, payment, fulfillment, and customer communication across multiple business systems.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Agent Orchestra:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Order Validator:</strong> Validates order details, pricing, availability</li>
+                                <li>• <strong>Inventory Manager:</strong> Checks stock across warehouses</li>
+                                <li>• <strong>Payment Processor:</strong> Handles payment validation and processing</li>
+                                <li>• <strong>Fulfillment Coordinator:</strong> Optimizes shipping and routing</li>
+                                <li>• <strong>Customer Communicator:</strong> Sends updates and handles inquiries</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Complex Decision Points:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Dynamic pricing based on inventory and demand</li>
+                                <li>• Intelligent substitutions for out-of-stock items</li>
+                                <li>• Fraud detection and risk assessment</li>
+                                <li>• Multi-channel fulfillment optimization</li>
+                                <li>• Exception handling and escalation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces order processing time by 80%</li>
+                                <li>• Improves order accuracy to 99.5%</li>
+                                <li>• Enables 24/7 order processing</li>
+                                <li>• Reduces operational costs by 40%</li>
+                                <li>• Improves customer satisfaction</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Use Agent Workbench to orchestrate multiple agents, integrate with ERP, CRM, WMS, and payment systems through Data Fabric. Implement sophisticated workflow management with human oversight capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-green-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Intelligent Supply Chain Optimizer</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Advanced</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive supply chain management system that predicts demand, optimizes procurement, and manages supplier relationships autonomously.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Agent Network:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Demand Forecaster:</strong> Predicts future demand patterns</li>
+                                <li>• <strong>Procurement Agent:</strong> Manages supplier negotiations</li>
+                                <li>• <strong>Inventory Optimizer:</strong> Balances stock levels</li>
+                                <li>• <strong>Risk Assessor:</strong> Monitors supplier and market risks</li>
+                                <li>• <strong>Logistics Coordinator:</strong> Optimizes transportation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Advanced Capabilities:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Machine learning demand forecasting</li>
+                                <li>• Dynamic supplier performance scoring</li>
+                                <li>• Real-time market price analysis</li>
+                                <li>• Geopolitical risk assessment</li>
+                                <li>• Sustainability compliance monitoring</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces inventory holding costs by 25%</li>
+                                <li>• Improves forecast accuracy by 40%</li>
+                                <li>• Reduces stockouts by 60%</li>
+                                <li>• Optimizes procurement costs by 15%</li>
+                                <li>• Enhances supply chain resilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Complex multi-agent system using Agent Workbench with integration to ERP, supplier portals, market data feeds, and analytics platforms. Requires advanced ML model integration and real-time data processing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Customer Experience Transformation</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-purple-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Omnichannel Customer Experience Engine</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Expert</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Unified customer experience platform that maintains context across all touchpoints and proactively manages customer relationships.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Specialized Agents:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Journey Orchestrator:</strong> Maps and optimizes customer journeys</li>
+                                <li>• <strong>Interaction Manager:</strong> Handles cross-channel communications</li>
+                                <li>• <strong>Sentiment Analyzer:</strong> Monitors customer sentiment</li>
+                                <li>• <strong>Personalization Engine:</strong> Customizes experiences</li>
+                                <li>• <strong>Retention Specialist:</strong> Identifies and prevents churn</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Advanced Features:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Real-time customer 360° view</li>
+                                <li>• Predictive customer behavior modeling</li>
+                                <li>• Dynamic content personalization</li>
+                                <li>• Proactive issue resolution</li>
+                                <li>• Cross-channel context preservation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Improves customer satisfaction by 45%</li>
+                                <li>• Increases customer lifetime value by 30%</li>
+                                <li>• Reduces churn rate by 35%</li>
+                                <li>• Boosts conversion rates by 25%</li>
+                                <li>• Enables true omnichannel experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Requires comprehensive integration with CRM, marketing automation, support systems, and all customer touchpoints. Uses Agent Workbench for complex workflow orchestration and real-time decision making.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-indigo-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Intelligent Crisis Response System</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Expert</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Automated crisis management system that detects, assesses, and responds to business disruptions in real-time across multiple scenarios.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Response Team:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Threat Detector:</strong> Monitors for anomalies and issues</li>
+                                <li>• <strong>Impact Assessor:</strong> Evaluates potential business impact</li>
+                                <li>• <strong>Response Coordinator:</strong> Orchestrates response actions</li>
+                                <li>• <strong>Communication Manager:</strong> Handles stakeholder communications</li>
+                                <li>• <strong>Recovery Planner:</strong> Manages business continuity</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Crisis Types:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• System outages and cyber incidents</li>
+                                <li>• Supply chain disruptions</li>
+                                <li>• Natural disasters and emergencies</li>
+                                <li>• Regulatory compliance issues</li>
+                                <li>• Public relations crises</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces incident response time by 70%</li>
+                                <li>• Minimizes business disruption impact</li>
+                                <li>• Improves stakeholder communication</li>
+                                <li>• Ensures regulatory compliance</li>
+                                <li>• Enhances organizational resilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> High-complexity system requiring integration with monitoring tools, communication platforms, and business continuity systems. Uses Agent Workbench for sophisticated decision trees and escalation procedures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Financial & Regulatory Intelligence</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-red-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Autonomous Compliance & Risk Management</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Expert</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive regulatory compliance system that monitors, assesses, and ensures adherence to complex regulatory requirements across multiple jurisdictions.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Compliance Agents:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Regulation Monitor:</strong> Tracks regulatory changes</li>
+                                <li>• <strong>Transaction Screener:</strong> Monitors for suspicious activities</li>
+                                <li>• <strong>Risk Assessor:</strong> Evaluates compliance risks</li>
+                                <li>• <strong>Report Generator:</strong> Creates regulatory reports</li>
+                                <li>• <strong>Audit Coordinator:</strong> Manages audit processes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Regulatory Domains:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Anti-money laundering (AML)</li>
+                                <li>• Know your customer (KYC)</li>
+                                <li>• Data privacy (GDPR, CCPA)</li>
+                                <li>• Financial reporting standards</li>
+                                <li>• Industry-specific regulations</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Reduces compliance costs by 50%</li>
+                                <li>• Minimizes regulatory violations</li>
+                                <li>• Improves audit readiness</li>
+                                <li>• Reduces manual compliance work by 80%</li>
+                                <li>• Enables proactive risk management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Highly specialized system requiring integration with financial systems, regulatory databases, and reporting platforms. Uses Agent Workbench for complex rule engines and decision logic.</p>
+                    </div>
+                </div>
+
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-yellow-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Intelligent Investment Portfolio Manager</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Expert</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        Autonomous investment management system that makes real-time portfolio decisions based on market conditions, risk profiles, and investment objectives.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Investment Team:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Market Analyzer:</strong> Analyzes market trends and data</li>
+                                <li>• <strong>Risk Manager:</strong> Monitors and manages portfolio risk</li>
+                                <li>• <strong>Strategy Executor:</strong> Implements investment decisions</li>
+                                <li>• <strong>Performance Monitor:</strong> Tracks investment performance</li>
+                                <li>• <strong>Rebalancer:</strong> Maintains optimal asset allocation</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Advanced Analytics:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Real-time market sentiment analysis</li>
+                                <li>• Predictive modeling for asset prices</li>
+                                <li>• Risk-adjusted return optimization</li>
+                                <li>• Correlation and diversification analysis</li>
+                                <li>• ESG compliance monitoring</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Improves portfolio performance by 15-25%</li>
+                                <li>• Reduces management costs by 60%</li>
+                                <li>• Enables 24/7 market monitoring</li>
+                                <li>• Minimizes emotional investment decisions</li>
+                                <li>• Improves risk-adjusted returns</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Sophisticated system requiring real-time market data integration, trading platform connections, and complex algorithmic decision-making. Uses Agent Workbench for advanced portfolio management logic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h3 class="text-3xl font-bold text-gray-900 category-header">Research & Development Acceleration</h3>
+            
+            <div class="grid gap-6 mb-8">
+                <div class="use-case-card p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="bg-teal-100 rounded-lg p-3">
+                                <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900">Autonomous R&D Discovery Platform</h4>
+                        </div>
+                        <div class="flex space-x-2">
+                            <span class="difficulty-badge">Expert</span>
+                            <span class="complexity-indicator">Multi-Agent</span>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-4">
+                        AI-driven research and development system that accelerates innovation by autonomously conducting literature reviews, hypothesis generation, and experimental design.
+                    </p>
+                    
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Research Agents:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• <strong>Literature Reviewer:</strong> Analyzes scientific publications</li>
+                                <li>• <strong>Hypothesis Generator:</strong> Proposes research hypotheses</li>
+                                <li>• <strong>Experiment Designer:</strong> Designs optimal experiments</li>
+                                <li>• <strong>Data Analyzer:</strong> Processes experimental results</li>
+                                <li>• <strong>Innovation Synthesizer:</strong> Identifies breakthrough opportunities</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Capabilities:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Cross-domain knowledge synthesis</li>
+                                <li>• Automated patent landscape analysis</li>
+                                <li>• Experimental parameter optimization</li>
+                                <li>• Predictive modeling for outcomes</li>
+                                <li>• Competitive intelligence gathering</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-2">Business Impact:</h5>
+                            <ul class="text-sm text-gray-700 space-y-1">
+                                <li>• Accelerates R&D cycles by 40%</li>
+                                <li>• Reduces research costs by 30%</li>
+                                <li>• Improves success rate of experiments</li>
+                                <li>• Identifies new innovation opportunities</li>
+                                <li>• Enhances competitive advantage</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-gray-50 rounded-lg">
+                        <p class="text-sm text-gray-600"><strong>OutSystems Implementation:</strong> Highly specialized system requiring integration with scientific databases, patent systems, laboratory equipment, and research management platforms. Uses advanced AI models for scientific reasoning and discovery.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-8 mb-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Prerequisites for Run Use Cases</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Before You Start Running:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Successfully deployed at least 2-3 Walk use cases</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Established AI governance and safety practices</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Mature data infrastructure and integration capabilities</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Dedicated AI/automation team with enterprise experience</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-3">Implementation Approach:</h4>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><strong>Phase 1 (Months 1-2):</strong> Architecture design and foundation setup</li>
+                        <li><strong>Phase 2 (Months 2-4):</strong> Core agent development and integration</li>
+                        <li><strong>Phase 3 (Months 4-5):</strong> Multi-agent orchestration and testing</li>
+                        <li><strong>Phase 4 (Months 5-6):</strong> Production deployment and optimization</li>
+                        <li><strong>Ongoing:</strong> Continuous monitoring, learning, and enhancement</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-6 text-center">
+                <a href="walk-use-cases.html" class="bg-green-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-700 transition-colors mr-4">
+                    ← Start with Walk Use Cases
+                </a>
+                <a href="AI_Agent_Run_Playbook.html" class="bg-purple-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-purple-700 transition-colors">
+                    Explore the Run Playbook →
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Run AI Agent Use Cases. Enterprise-scale AI systems for maximum impact.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
