@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent 'Run' Playbook: Enterprise-Grade Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .nav-link.active {
+            color: #ffffff;
+            background-color: #0071bc;
+            font-weight: 600;
+        }
+        .method-card {
+            background: #fff;
+            border: 1px solid #d6d7d9;
+            border-radius: 3px;
+            transition: border-color 0.15s ease-in-out;
+        }
+        .method-card:hover {
+            border-color: #0071bc;
+        }
+        .phase-header {
+            border-bottom: 3px solid #0071bc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        .advanced-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gray-800 text-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between py-4">
+                <div class="mb-4 sm:mb-0 flex items-center space-x-3">
+                    <div>
+                        <h1 class="text-2xl font-bold">AI Agent "Run" Playbook</h1>
+                        <p class="text-sm text-gray-300">Enterprise-Grade Implementation Guide</p>
+                    </div>
+                    <span class="advanced-badge">Advanced</span>
+                </div>
+                <nav id="nav-menu" class="flex flex-wrap justify-center gap-1">
+                    <a href="index.html" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">← Home</a>
+                    <a href="#scale" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Scale</a>
+                    <a href="#orchestrate" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Orchestrate</a>
+                    <a href="#optimize" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Optimize</a>
+                    <a href="#govern" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Govern</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Now You're Ready to Run</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 mb-6">
+                    You've mastered the fundamentals with the "Walk" playbook. Now it's time to scale, optimize, and orchestrate enterprise-grade AI agent systems that can handle complex workflows, multiple agents, and production-scale demands.
+                </p>
+                <div class="bg-purple-50 border-l-4 border-purple-400 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-purple-900 mb-2">Prerequisites</h3>
+                    <p class="text-purple-800">
+                        This playbook assumes you have successfully implemented at least one production agent using the "Walk" methodology. You should have experience with basic agent evaluation, safety testing, and OutSystems agent development.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-blue-900 mb-2">What You'll Learn</h4>
+                        <ul class="text-blue-800 space-y-1 text-sm">
+                            <li>• Multi-agent orchestration patterns</li>
+                            <li>• Enterprise integration strategies</li>
+                            <li>• Advanced monitoring and governance</li>
+                            <li>• Performance optimization techniques</li>
+                            <li>• Complex workflow automation</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h4 class="font-semibold text-green-900 mb-2">Expected Outcomes</h4>
+                        <ul class="text-green-800 space-y-1 text-sm">
+                            <li>• Scalable multi-agent systems</li>
+                            <li>• Robust enterprise integrations</li>
+                            <li>• Comprehensive governance framework</li>
+                            <li>• Optimized performance and costs</li>
+                            <li>• Production-ready automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="scale" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Scale</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Move beyond single-agent solutions to architect systems that can handle multiple agents, high-volume workloads, and complex enterprise requirements.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-indigo-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Multi-Agent Architecture Design</h4>
+                            <p class="text-gray-600">Design and implement complex multi-agent systems with proper coordination and communication patterns.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">When single agents cannot handle the complexity or when you need specialized agents for different domains.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Advanced Implementation Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Agent Role Definition:</strong> Define specialized roles (Manager, Worker, Validator, Coordinator)</li>
+                                <li><strong>Communication Protocol:</strong> Establish message passing and event-driven communication</li>
+                                <li><strong>Coordination Strategy:</strong> Implement orchestration vs choreography patterns</li>
+                                <li><strong>State Management:</strong> Design shared state and agent-specific context handling</li>
+                                <li><strong>Failure Recovery:</strong> Build resilience with agent failover and recovery mechanisms</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Implementation</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Agent Workbench Multi-Agent Patterns</h6>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>Manager-Worker Pattern:</strong> Central coordinator with specialized workers</li>
+                                    <li>• <strong>Pipeline Pattern:</strong> Sequential processing with handoffs between agents</li>
+                                    <li>• <strong>Committee Pattern:</strong> Multiple agents collaborating on complex decisions</li>
+                                    <li>• <strong>Market Pattern:</strong> Agents bidding for tasks based on capability</li>
+                                </ul>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Key Considerations</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Inter-agent communication latency</li>
+                                <li>Distributed state consistency</li>
+                                <li>Agent lifecycle management</li>
+                                <li>Resource contention and scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-purple-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">High-Performance RAG Systems</h4>
+                            <p class="text-gray-600">Build enterprise-scale Retrieval-Augmented Generation systems with advanced indexing, caching, and optimization.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Advanced RAG Techniques</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Hybrid Search:</strong> Combine dense and sparse retrieval methods</li>
+                                <li><strong>Multi-Modal Indexing:</strong> Index text, images, and structured data</li>
+                                <li><strong>Contextual Chunking:</strong> Smart document segmentation with overlap</li>
+                                <li><strong>Re-ranking Systems:</strong> Secondary ranking for relevance optimization</li>
+                                <li><strong>Caching Strategies:</strong> Multi-level caching for performance</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Integration</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Data Fabric Advanced Features</h6>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>Federated Search:</strong> Query across multiple data sources</li>
+                                    <li>• <strong>Real-time Sync:</strong> Keep vector stores current with source changes</li>
+                                    <li>• <strong>Security Integration:</strong> Row-level security and data masking</li>
+                                    <li>• <strong>Performance Monitoring:</strong> Query performance and index optimization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="orchestrate" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Orchestrate</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Design and implement complex workflows that coordinate multiple agents, systems, and human interactions for enterprise-grade automation.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-green-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Complex Workflow Design</h4>
+                            <p class="text-gray-600">Architect sophisticated workflows that handle branching logic, parallel processing, and dynamic decision-making.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Workflow Patterns</h5>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-green-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Conditional Branching</h6>
+                                    <p class="text-gray-700 text-sm">Dynamic routing based on content analysis, user roles, or business rules.</p>
+                                </div>
+                                <div class="border-l-4 border-blue-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Parallel Processing</h6>
+                                    <p class="text-gray-700 text-sm">Concurrent execution of independent tasks with synchronization points.</p>
+                                </div>
+                                <div class="border-l-4 border-purple-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Human-in-the-Loop</h6>
+                                    <p class="text-gray-700 text-sm">Seamless integration of human decision points and approvals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Workflows Integration</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Advanced Workflow Features</h6>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>Process Activities:</strong> Custom activities for agent orchestration</li>
+                                    <li>• <strong>Event-Driven Triggers:</strong> React to external system events</li>
+                                    <li>• <strong>Escalation Policies:</strong> Automatic escalation and timeout handling</li>
+                                    <li>• <strong>Process Monitoring:</strong> Real-time workflow visibility and control</li>
+                                </ul>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Implementation Considerations</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Long-running workflow persistence</li>
+                                <li>Error handling and compensation</li>
+                                <li>Version management and migration</li>
+                                <li>Performance optimization for scale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-orange-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Enterprise System Integration</h4>
+                            <p class="text-gray-600">Connect agents with existing enterprise systems, APIs, and data sources for comprehensive automation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Integration Strategies</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>API Gateway Integration:</strong> Centralized API management and security</li>
+                                <li><strong>Message Queue Systems:</strong> Asynchronous processing with reliable delivery</li>
+                                <li><strong>Event Streaming:</strong> Real-time data processing and event handling</li>
+                                <li><strong>Legacy System Adapters:</strong> Bridge modern agents with legacy systems</li>
+                                <li><strong>Data Pipeline Automation:</strong> Automated ETL processes for agent consumption</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Security and Compliance</h5>
+                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-red-900 mb-2">Enterprise Security Requirements</h6>
+                                <ul class="text-sm text-red-800 space-y-1">
+                                    <li>• <strong>Identity Management:</strong> SSO and RBAC integration</li>
+                                    <li>• <strong>Data Encryption:</strong> End-to-end encryption for sensitive data</li>
+                                    <li>• <strong>Audit Trails:</strong> Comprehensive logging for compliance</li>
+                                    <li>• <strong>Network Security:</strong> VPN and firewall configurations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="optimize" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Optimize</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Fine-tune performance, reduce costs, and maximize efficiency through advanced monitoring, optimization techniques, and intelligent resource management.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-yellow-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Advanced Performance Monitoring</h4>
+                            <p class="text-gray-600">Implement comprehensive monitoring and analytics to optimize agent performance and resource utilization.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Key Metrics to Track</h5>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold text-gray-800 mb-1">Performance Metrics</h6>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Response time percentiles (P50, P95, P99)</li>
+                                        <li>• Throughput and concurrent users</li>
+                                        <li>• Resource utilization (CPU, memory, GPU)</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold text-gray-800 mb-1">Quality Metrics</h6>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Task completion accuracy over time</li>
+                                        <li>• User satisfaction scores</li>
+                                        <li>• Error rates and failure patterns</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold text-gray-800 mb-1">Business Metrics</h6>
+                                    <ul class="text-sm text-gray-700 space-y-1">
+                                        <li>• Cost per transaction</li>
+                                        <li>• Time savings and automation rate</li>
+                                        <li>• Return on AI investment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Monitoring Stack</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Enterprise Monitoring Features</h6>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>LifeTime Analytics:</strong> Cross-environment performance tracking</li>
+                                    <li>• <strong>Custom Dashboards:</strong> Business-specific KPI visualization</li>
+                                    <li>• <strong>Alert Management:</strong> Proactive issue detection and notification</li>
+                                    <li>• <strong>Performance Intelligence:</strong> AI-powered optimization recommendations</li>
+                                </ul>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Optimization Strategies</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Model caching and result memoization</li>
+                                <li>Dynamic resource scaling</li>
+                                <li>A/B testing for prompt optimization</li>
+                                <li>Load balancing and traffic shaping</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-teal-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Cost Optimization & Resource Management</h4>
+                            <p class="text-gray-600">Implement strategies to minimize operational costs while maintaining performance and reliability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Cost Reduction Techniques</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Model Right-Sizing:</strong> Use the smallest model that meets requirements</li>
+                                <li><strong>Intelligent Caching:</strong> Reduce redundant API calls and computations</li>
+                                <li><strong>Request Batching:</strong> Optimize API usage with batch processing</li>
+                                <li><strong>Auto-Scaling:</strong> Dynamic resource allocation based on demand</li>
+                                <li><strong>Prompt Optimization:</strong> Minimize token usage through efficient prompting</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Resource Management</h5>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h6 class="font-semibold text-green-900 mb-2">OutSystems Resource Optimization</h6>
+                                <ul class="text-sm text-green-800 space-y-1">
+                                    <li>• <strong>Application Lifecycle:</strong> Automated deployment and scaling</li>
+                                    <li>• <strong>Resource Pools:</strong> Shared compute resources across applications</li>
+                                    <li>• <strong>Performance Monitoring:</strong> Identify and resolve bottlenecks</li>
+                                    <li>• <strong>Capacity Planning:</strong> Predictive scaling based on usage patterns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="govern" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Govern</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Establish comprehensive governance frameworks for AI agents including compliance, risk management, ethical AI practices, and regulatory adherence.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-red-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">AI Governance Framework</h4>
+                            <p class="text-gray-600">Implement comprehensive governance policies for responsible AI development and deployment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Governance Components</h5>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-red-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">AI Ethics Committee</h6>
+                                    <p class="text-gray-700 text-sm">Cross-functional team reviewing AI implementations for ethical implications.</p>
+                                </div>
+                                <div class="border-l-4 border-orange-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Risk Assessment Framework</h6>
+                                    <p class="text-gray-700 text-sm">Systematic evaluation of AI risks including bias, fairness, and safety.</p>
+                                </div>
+                                <div class="border-l-4 border-yellow-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Compliance Monitoring</h6>
+                                    <p class="text-gray-700 text-sm">Automated compliance checking against regulatory requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Regulatory Compliance</h5>
+                            <div class="bg-red-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-red-900 mb-2">Key Regulations</h6>
+                                <ul class="text-sm text-red-800 space-y-1">
+                                    <li>• <strong>GDPR:</strong> Data protection and privacy rights</li>
+                                    <li>• <strong>AI Act (EU):</strong> Risk-based AI regulation framework</li>
+                                    <li>• <strong>SOX:</strong> Financial reporting and internal controls</li>
+                                    <li>• <strong>HIPAA:</strong> Healthcare data protection requirements</li>
+                                </ul>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Documentation Requirements</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>AI system documentation and model cards</li>
+                                <li>Data lineage and processing records</li>
+                                <li>Decision audit trails</li>
+                                <li>Bias testing and fairness assessments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-indigo-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Enterprise Security & Access Control</h4>
+                            <p class="text-gray-600">Implement robust security measures and access controls for enterprise AI agent deployments.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Security Architecture</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Zero Trust Architecture:</strong> Never trust, always verify approach</li>
+                                <li><strong>Multi-Factor Authentication:</strong> Layered authentication mechanisms</li>
+                                <li><strong>API Security:</strong> Rate limiting, authentication, and encryption</li>
+                                <li><strong>Data Classification:</strong> Automated data sensitivity classification</li>
+                                <li><strong>Threat Detection:</strong> AI-powered security monitoring</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Security Features</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Enterprise Security Controls</h6>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>Role-Based Access:</strong> Granular permissions and user roles</li>
+                                    <li>• <strong>Network Security:</strong> VPN and private cloud deployment</li>
+                                    <li>• <strong>Data Encryption:</strong> End-to-end encryption for sensitive data</li>
+                                    <li>• <strong>Audit Logging:</strong> Comprehensive activity logging and monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-purple-50 border-l-4 border-purple-500 p-8 mb-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise Readiness Checklist</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Multi-agent orchestration implemented</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Enterprise system integrations active</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Comprehensive monitoring and alerting</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Cost optimization strategies deployed</span>
+                    </li>
+                </ul>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">AI governance framework established</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Security and compliance verified</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Performance optimization completed</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Documentation and training complete</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 AI Agent "Run" Playbook. Enterprise-grade AI agent implementation guide.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navMenu = document.getElementById('nav-menu');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-25% 0px -75% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            navMenu.addEventListener('click', (e) => {
+                if (e.target.classList.contains('nav-link')) {
+                    setTimeout(() => {
+                         navLinks.forEach(link => link.classList.remove('active'));
+                         e.target.classList.add('active');
+                    }, 100);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

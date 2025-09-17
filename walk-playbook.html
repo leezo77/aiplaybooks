@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent 'Walk' Playbook: Your MVP Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        .nav-link.active {
+            color: #ffffff;
+            background-color: #0071bc;
+            font-weight: 600;
+        }
+        .method-card {
+            background: #fff;
+            border: 1px solid #d6d7d9;
+            border-radius: 3px;
+            transition: border-color 0.15s ease-in-out;
+        }
+        .method-card:hover {
+            border-color: #0071bc;
+        }
+        .phase-header {
+            border-bottom: 3px solid #0071bc;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-gray-800 text-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between py-4">
+                <div class="mb-4 sm:mb-0">
+                    <h1 class="text-2xl font-bold">AI Agent "Walk" Playbook</h1>
+                    <p class="text-sm text-gray-300">Your MVP Guide to Reliable Agents</p>
+                </div>
+                <nav id="nav-menu" class="flex flex-wrap justify-center gap-1">
+                    <a href="index.html" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">← Home</a>
+                    <a href="#discover" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Discover</a>
+                    <a href="#decide" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Decide</a>
+                    <a href="#make" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Make</a>
+                    <a href="#validate" class="nav-link text-gray-300 hover:bg-gray-700 hover:text-white px-4 py-2 text-sm font-medium transition-colors">Validate</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-12">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6">Walk Before You Run</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 mb-6">
+                    This playbook provides the essential, minimum viable steps to build your first reliable AI Agent using OutSystems. Focus on these core methods to deliver value quickly and safely, establishing a solid foundation before scaling to more complex "Run" scenarios.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">
+                    <h3 class="text-lg font-semibold text-blue-900 mb-2">The "Walk Before You Run" Philosophy</h3>
+                    <p class="text-blue-800">
+                        The goal of this playbook is to get a valuable, safe, and measurable agent into a controlled production environment. We focus on four core phases: <strong>Discover</strong>, <strong>Decide</strong>, <strong>Make</strong>, and <strong>Validate</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section id="discover" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Discover</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Start here to clarify goals, identify risks, and ensure your agent is solving a real, measurable problem. A strong foundation prevents wasted effort later.
+            </p>
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-blue-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Problem Framing & Success Criteria</h4>
+                            <p class="text-gray-600">A structured canvas to ensure your agent solves a concrete, high-value problem with measurable success.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">What it is</h5>
+                            <p class="text-gray-700 mb-4">A simple, one-page canvas to define a concrete problem and how to measure success. This is the most critical step.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">At the very beginning of the project, before any technical decisions are made.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Start Small, Scale Later:</strong> Scope creep is the enemy of effective AI. Define the smallest possible task the agent can perform to demonstrate value.</li>
+                                <li><strong>Define the User and Outcome:</strong> State the primary user and the desired outcome in a simple format: verb + object + constraint (e.g., "Categorize product SKUs from an email order").</li>
+                                <li><strong>Define Inputs and Allowed Actions:</strong> List what the agent receives (e.g., email text) and what it is allowed to do (e.g., call the product database API).</li>
+                                <li><strong>Draft Success Metrics:</strong> Define clear, measurable goals. Focus on Action Completion (AC) and Tool Selection Quality (TSQ). Set targets for latency and cost per action.</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A simple 1-page document with a clear goal statement, defined inputs/actions, and success metrics.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 mb-4">
+                                <li>Starting by picking a cool AI model instead of defining the problem</li>
+                                <li>Having vague success criteria like "improve efficiency"</li>
+                                <li>Giving the agent unlimited powers or tool access</li>
+                            </ul>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Tools</h5>
+                            <p class="text-gray-700">A simple document template; stakeholder interview notes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-red-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Risk & Harm Mapping</h4>
+                            <p class="text-gray-600">A quick exercise to identify the most obvious potential harms and plan basic mitigations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">What it is</h5>
+                            <p class="text-gray-700 mb-4">A quick exercise to identify the most obvious potential harms (e.g., privacy leaks, incorrect actions) and plan basic mitigations.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">Immediately after problem framing.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Map Data Sensitivity:</strong> Identify if the agent will handle sensitive data (PII, PHI).</li>
+                                <li><strong>List Attack Surfaces:</strong> Note the primary ways the agent could be misused (malicious user inputs, insecure tool endpoints).</li>
+                                <li><strong>Define Basic Mitigations:</strong> For each major risk, define a simple mitigation strategy (e.g., "add an input validation step," "require human approval for actions that delete data").</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A simple risk register listing the top 3-5 risks and their planned mitigations.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Treating safety as something to add later</li>
+                                <li>Not considering the security of the tools the agent uses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="decide" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Decide</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Choose the right technical path. This phase is about selecting the simplest architecture and data strategy that meets the goals you defined in the Discover phase.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-green-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Pattern Selection (Simplified)</h4>
+                            <p class="text-gray-600">A decision tree to choose the simplest agent architecture that will solve your defined problem.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">After problem framing and risk mapping.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-blue-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Workflow-Embedded Agent</h6>
+                                    <p class="text-gray-700 text-sm">Use this if the task is one step in an existing process, needs a fast response, and uses 1-2 tools. This is the simplest pattern, ideal for low-latency tasks.</p>
+                                </div>
+                                <div class="border-l-4 border-yellow-400 pl-4">
+                                    <h6 class="font-semibold text-gray-800">Independent Agent Service</h6>
+                                    <p class="text-gray-700 text-sm">Choose this if multiple applications need to call the agent. This provides a reusable API for your agent but is more complex.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Implementation</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">AI Agent Builder vs. Agent Workbench</h6>
+                                <div class="space-y-2 text-sm">
+                                    <div>
+                                        <strong class="text-blue-800">Use AI Agent Builder if:</strong>
+                                        <p class="text-blue-700">The agent's primary function is information retrieval (RAG), document classification, data extraction, or simple Q&A. This is a no-code solution ideal for low-to-medium complexity use cases.</p>
+                                    </div>
+                                    <div>
+                                        <strong class="text-blue-800">Use Agent Workbench if:</strong>
+                                        <p class="text-blue-700">The agent's core function involves more complex reasoning, multi-step processes, or performing actions via tool integration. This is a low-code environment for building sophisticated, enterprise-grade agents.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A clear decision on the architectural pattern with a brief rationale.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <p class="text-gray-700">Over-engineering with a multi-agent system when a single agent will do; tightly coupling the agent to a single application if it needs to be reused.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-purple-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Grounding Data Strategy (RAG Basics)</h4>
+                            <p class="text-gray-600">A basic plan for how your agent will use internal knowledge reliably using Retrieval-Augmented Generation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">If your agent's answers or actions must be based on your company's internal or up-to-date data.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Inventory Data Sources:</strong> List the 1-3 most critical data sources the agent needs.</li>
+                                <li><strong>Choose a Chunking Strategy:</strong> Start with a simple fixed-size chunking method. Semantic chunking is better but adds complexity for an MVP.</li>
+                                <li><strong>Select a Vector Store:</strong> For an MVP, a simple in-memory store like Chroma or a managed service like Pinecone can get you started quickly with minimal operational overhead.</li>
+                                <li><strong>Plan a Basic Data Pipeline:</strong> Outline the simple flow: clean source data → embed → index in vector store.</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Implementation</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">Data Fabric</h6>
+                                <p class="text-blue-700 text-sm">The OutSystems Developer Cloud (ODC) provides Data Fabric, a unified, low-code layer for accessing different enterprise data sources like databases and APIs. For RAG agents, Data Fabric can provide a secure and centralized connection point for the agent's data retrieval step, simplifying integration and enforcing data governance.</p>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A basic RAG architecture diagram and choice of vector store.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Trying to connect all company data at once</li>
+                                <li>Using fixed-size chunks for documents where context is easily lost</li>
+                                <li>Not having a plan to keep the indexed data fresh</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="make" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Make</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Implement the agent using production-ready practices. This is where you leverage OutSystems' capabilities to build a robust and governable agent, not just a demo.
+            </p>
+            
+            <div class="method-card p-6">
+                <div class="flex items-start space-x-4 mb-6">
+                    <div class="bg-indigo-100 rounded-lg p-3">
+                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Agent Skeleton (MVP Checklist)</h4>
+                        <p class="text-gray-600">A production-ready starting point that includes essential guardrails and observability from day one to avoid building fragile "demo-ware".</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                        <p class="text-gray-700 mb-4">At the start of implementation.</p>
+                        
+                        <h5 class="font-semibold text-gray-900 mb-3">The MVP Checklist</h5>
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Typed Schemas:</strong>
+                                    <p class="text-gray-600 text-sm">Use a tool like JSON Schema to define structured inputs and outputs. This is the foundation of a reliable agent.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Tool Adapters with Error Handling:</strong>
+                                    <p class="text-gray-600 text-sm">Create clear interfaces for any tools the agent uses. Ensure they handle errors gracefully and can retry if necessary.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Basic Guardrails:</strong>
+                                    <p class="text-gray-600 text-sm">Implement input sanitation to block malicious prompts and output validators to ensure the agent's response is in the correct format.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Simple Memory:</strong>
+                                    <p class="text-gray-600 text-sm">For conversational agents, implement a basic short-term memory that stores the last few turns of the conversation. Long-term memory can be added later.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Observability Hooks:</strong>
+                                    <p class="text-gray-600 text-sm">Integrate basic logging and tracing from day one. Use a standard like OpenTelemetry to log key events: agent start/end, tool calls, and final output.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">Human-in-the-Loop (for risky actions):</strong>
+                                    <p class="text-gray-600 text-sm">If the agent can perform irreversible actions, build a mandatory "escape hatch" where it must pause and get human approval before proceeding.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <div>
+                                    <strong class="text-gray-800">A Kill Switch:</strong>
+                                    <p class="text-gray-600 text-sm">Implement a simple mechanism, like a feature flag, to quickly and completely disable the agent's automated actions in production if something goes wrong.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h5 class="font-semibold text-gray-900 mb-3">OutSystems Implementation</h5>
+                        <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                            <h6 class="font-semibold text-blue-900 mb-2">Agent Workbench AgentTask</h6>
+                            <p class="text-blue-700 text-sm mb-3">An agent built with the OutSystems Agent Workbench is implemented as a visual Server Action called an AgentTask. This action orchestrates the agent's reasoning loop through a sequence of granular steps, making the logic transparent and maintainable. A typical MVP sequence includes:</p>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>• <strong>GetGroundingData:</strong> Fetches contextual information from data sources, often via Data Fabric.</li>
+                                <li>• <strong>BuildMessages:</strong> Constructs the final prompt for the LLM by combining the user query, retrieved data, and conversation history.</li>
+                                <li>• <strong>CallLLM:</strong> Sends the prompt to the selected AI model (e.g., Azure OpenAI).</li>
+                                <li>• <strong>StoreMemory:</strong> Persists the conversation turn to the OutSystems database to enable memory.</li>
+                            </ul>
+                        </div>
+                        
+                        <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                        <p class="text-gray-700 mb-4">A scaffolded agent in your OutSystems app, ready for logic implementation that includes all the checklist items.</p>
+                        
+                        <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700">
+                            <li>Hard-coding prompts in the logic; no error handling; missing a kill switch</li>
+                            <li>Mixing business logic into prompts</li>
+                            <li>Not having typed inputs/outputs</li>
+                            <li>Having no way to debug what the agent did</li>
+                        </ul>
+                        
+                        <h5 class="font-semibold text-gray-900 mb-3">Tools</h5>
+                        <p class="text-gray-700"><strong class="text-blue-600">OutSystems Agent Builder</strong>, <strong class="text-blue-600">Agent Workbench</strong> for testing and iteration, OutSystems Service Studio, and the <strong class="text-blue-600">Feature Flags Forge component</strong> for the kill switch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="validate" class="mb-16 scroll-mt-24">
+            <h3 class="text-3xl font-bold text-gray-900 phase-header">Validate</h3>
+            <p class="text-lg text-gray-700 mb-8 max-w-4xl">
+                Evaluate the agent's reliability and safety. Before going live, you must have a repeatable way to prove the agent does what it's supposed to do—and doesn't do what it shouldn't.
+            </p>
+            
+            <div class="grid gap-8">
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-yellow-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Agent Evaluation (Core Metrics)</h4>
+                            <p class="text-gray-600">A repeatable process to measure if your agent is successfully achieving its goal.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">Before launch and every time you change the prompt or model.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Author 10-20 Key Scenarios:</strong> Write a set of test cases that represent the agent's most common and important tasks.</li>
+                                <li><strong>Measure Action Completion (AC):</strong> This is your primary success metric. It's a simple question: did the agent successfully achieve the user's end-to-end goal in the scenario?</li>
+                                <li><strong>Measure Tool Selection Quality (TSQ):</strong> This is your primary efficiency metric. Did the agent use the correct tools with the correct parameters, and did it avoid unnecessary calls?</li>
+                                <li><strong>Track Latency and Cost:</strong> For each scenario, record how long the agent took and how much it cost (e.g., token usage).</li>
+                                <li><strong>Gate your deployment pipeline:</strong> Don't deploy if success metrics drop.</li>
+                            </ol>
+                            
+                            <div class="bg-green-50 p-4 rounded-lg mt-4">
+                                <h6 class="font-semibold text-green-900 mb-2">Acceptance Criteria Example</h6>
+                                <ul class="text-sm text-green-800 space-y-1">
+                                    <li>• AC ≥ 85% on key scenarios</li>
+                                    <li>• TSQ ≥ 90%</li>
+                                    <li>• p95 latency ≤ 5 seconds</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">OutSystems Implementation</h5>
+                            <div class="bg-blue-50 p-4 rounded-lg mb-4">
+                                <h6 class="font-semibold text-blue-900 mb-2">ODC Monitoring</h6>
+                                <p class="text-blue-700 text-sm mb-2">You can use the built-in observability tools in the OutSystems Developer Cloud (ODC) to track your MVP's performance against your defined metrics.</p>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>• <strong>App Analytics Dashboard:</strong> The native dashboard in the ODC Portal monitors key metrics for AI agents, including total requests, response time (latency), and errors.</li>
+                                    <li>• <strong>Traces and Logs:</strong> For failed scenarios, you can use the ODC Portal to examine distributed traces and logs. Traces capture the sequence of events in an agent's execution, helping you pinpoint the exact step where an issue occurred.</li>
+                                </ul>
+                            </div>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A simple test results dashboard; pass/fail criteria for deployments.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Only checking if the text output "looks good"; not measuring end-to-end success</li>
+                                <li>Not measuring end-to-end success</li>
+                            </ul>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Tools</h5>
+                            <p class="text-gray-700"><strong class="text-blue-600">OutSystems AI Agent Inspector</strong> for debugging; a simple OutSystems app to run scenarios and log results.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card p-6">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="bg-red-100 rounded-lg p-3">
+                            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Basic Safety Testing</h4>
+                            <p class="text-gray-600">A focused set of tests for the most likely security and safety risks identified during the Discover phase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">When to use</h5>
+                            <p class="text-gray-700 mb-4">Before the first production deployment.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">MVP Steps</h5>
+                            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                                <li><strong>Prompt Injection Tests:</strong> Use a library of known prompt injection attacks to test if the agent can be forced to ignore its instructions.</li>
+                                <li><strong>Data Leakage Tests:</strong> If the agent handles sensitive data, create tests to see if you can trick it into revealing that data.</li>
+                                <li><strong>Validate Guardrails:</strong> Test the input and output validators you built in the "Make" phase to ensure they work as expected.</li>
+                            </ol>
+                        </div>
+                        
+                        <div>
+                            <h5 class="font-semibold text-gray-900 mb-3">Outputs</h5>
+                            <p class="text-gray-700 mb-4">A safety scorecard showing pass/fail for the essential safety checks.</p>
+                            
+                            <h5 class="font-semibold text-gray-900 mb-3">Pitfalls to Avoid</h5>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700">
+                                <li>Treating safety as an advisory check</li>
+                                <li>Not having automated safety tests that can be run regularly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-gray-50 border-l-4 border-blue-500 p-8 mb-16">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Quick Reference: The MVP Mindset</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Start with the smallest, most specific problem</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Choose the simplest architecture that works</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">If the agent needs knowledge, use basic RAG</span>
+                    </li>
+                </ul>
+                <ul class="space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Build a stable skeleton with logging and kill switch</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="text-gray-800">Prove its value with Action Completion (AC) and Tool Selection Quality (TSQ)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 AI Agent "Walk" Playbook. A guide for building reliable AI agents.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navMenu = document.getElementById('nav-menu');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-25% 0px -75% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            navMenu.addEventListener('click', (e) => {
+                if (e.target.classList.contains('nav-link')) {
+                    setTimeout(() => {
+                         navLinks.forEach(link => link.classList.remove('active'));
+                         e.target.classList.add('active');
+                    }, 100);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
